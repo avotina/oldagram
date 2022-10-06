@@ -70,12 +70,8 @@ function renderPosts() {
     
 renderPosts()
 
-function incrementLikes() {
-    const likesBtn = document.getElementById("likes-btn")
-     let likesCount = document.getElementById("likes")
-        likesBtn.addEventListener("click", function() {
-          console.log("liked")
-     })
-}
-
-incrementLikes()
+document.getElementById("likes-btn").addEventListener("click", function() {
+        //   console.log("liked")
+        let likes = document.getElementById("likes").innerHTML = 
+        console.log(likes)
+    })
