@@ -41,9 +41,3 @@ function renderPosts() {
     }
     
 renderPosts()
-
-document.getElementById("likes-btn").addEventListener("click", function() {
-        //   console.log("liked")
-        
-        console.log(`${post.likes +=1}`)
-    })
