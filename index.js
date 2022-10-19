@@ -1,6 +1,4 @@
-import posts from "/data.js"
-
-const containers = document.getElementById("containers")
+import { posts } from "/data.js"
     
 function renderPosts() {
     let postsHtml = ""
@@ -37,7 +35,7 @@ function renderPosts() {
                 </main>
             </div>` 
     })
-        containers.innerHTML = postsHtml
+    document.getElementById("containers").innerHTML = postsHtml
 }
     
 renderPosts()
