@@ -4,7 +4,7 @@ const containers = document.getElementById("containers")
     
 function renderPosts() {
     let postsHtml = ""
-    for (let post of posts) {
+    posts.forEach(function(post) {
         postsHtml += `     
             <div class="post">
                 <header>
@@ -36,8 +36,8 @@ function renderPosts() {
                     </section>
                 </main>
             </div>` 
-        } 
+    })
         containers.innerHTML = postsHtml
-    }
+}
     
 renderPosts()
