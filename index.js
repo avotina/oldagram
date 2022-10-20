@@ -7,7 +7,17 @@ document.addEventListener("click", function(e) {
 })
   
 function handleLikes(likesId) {
-    console.log(likesId)
+    const targetLikeObj = posts.filter(function(like) {
+        return like.uuid === likesId
+    })[0]
+
+    if (targetLikeObj.isLiked) {
+        targetLikeObj.likes--
+    } else {
+        targetLikeObj.likes++
+    }
+    targetLikeObj.isLiked = !targetLikeObj.isLiked
+    renderPosts()
 }
 
 function renderPosts() {
@@ -49,4 +59,3 @@ function renderPosts() {
 }
     
 renderPosts()
-
