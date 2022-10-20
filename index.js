@@ -1,5 +1,15 @@
 import { posts } from "/data.js"
-    
+
+document.addEventListener("click", function(e) {
+    if (e.target.dataset.likes) {
+        handleLikes(e.target.dataset.likes)
+    }
+})
+  
+function handleLikes(likesId) {
+    console.log(likesId)
+}
+
 function renderPosts() {
     let postsHtml = ""
     posts.forEach(function(post) {
@@ -22,7 +32,7 @@ function renderPosts() {
                     <section>
                         <img src=${post.post} class="post-image">
                         <div>
-                            <img src="images/icon-heart.png" class="icons" id="likes-btn">
+                            <img src="images/icon-heart.png" class="icons" id="likes-btn" data-likes="${post.uuid}">
                             <img src="images/icon-comment.png" class="icons">
                             <img src="images/icon-dm.png" class="icons">
                         </div>
@@ -39,3 +49,4 @@ function renderPosts() {
 }
     
 renderPosts()
+
